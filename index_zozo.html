@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Formulaire Google Sheet</title>
+  <style>
+    .custom-form {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f7f7f7;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    
+    .custom-form h1 {
+      text-align: center;
+    }
+    
+    .custom-form label {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    
+    .custom-form input[type="text"],
+    .custom-form input[type="email"],
+    .custom-form textarea {
+      width: 90%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    
+    .custom-form input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+
+      
+    }
+
+    .custom-form label {
+        display: inline-block;
+        vertical-align: middle;
+        margin-bottom: 10px;
+        }
+
+        .custom-form input[type="radio"],
+        .custom-form input[type="checkbox"] {
+        margin-right: 5px;
+        }
+  </style>
+</head>
+<body>
+    <div class="custom-form">
+        <h1>Formulaire avec Questionnaire</h1>
+      
+        <form id="question-form" action="https://script.google.com/macros/s/AKfycbx_Y9yaSdU6B_PyKqJIwc8lIP3ZY9PAN__N94d4N8d10hUpZaOgE9tBNvJXAhJJaqSk/exec" method="POST">
+          
+          <h2>Questionnaire à choix multiple :</h2>
+          <p>Sélectionnez votre langue préférée :</p>
+          <input type="radio" id="lang-fr" name="language" value="fr">
+          <label for="lang-fr">Français</label><br>
+          <input type="radio" id="lang-en" name="language" value="en">
+          <label for="lang-en">Anglais</label><br>
+          <input type="radio" id="lang-es" name="language" value="es">
+          <label for="lang-es">Espagnol</label><br><br>
+          
+          <h2>Questionnaire à choix simple (Question 1) :</h2>
+          <p>Quelle est votre couleur préférée ?</p>
+          <input type="radio" id="color-red" name="color" value="red">
+          <label for="color-red">Rouge</label><br>
+          <input type="radio" id="color-blue" name="color" value="blue">
+          <label for="color-blue">Bleu</label><br>
+          <input type="radio" id="color-green" name="color" value="green">
+          <label for="color-green">Vert</label><br><br>
+          
+          <h2>Questionnaire à choix simple (Question 2) :</h2>
+          <p>Quel est votre animal préféré ?</p>
+          <input type="checkbox" id="animal-cat" name="animal" value="cat">
+          <label for="animal-cat">Chat</label><br>
+          <input type="checkbox" id="animal-dog" name="animal" value="dog">
+          <label for="animal-dog">Chien</label><br>
+          <input type="checkbox" id="animal-bird" name="animal" value="bird">
+          <label for="animal-bird">Oiseau</label><br><br>
+          
+          <h2>Questions à réponse courte :</h2>
+          <label for="name">Question 1 :</label>
+          <input type="text" id="name" name="name" required><br><br>
+          
+          <label for="email">Question 2 :</label>
+          <input type="text" id="email" name="email" required><br><br>
+          
+          <label for="message">Question 3 :</label>
+          <input type="text" id="message" name="message" required><br><br>
+          
+          <label for="question4">Question 4 :</label>
+          <input type="text" id="question4" name="question4" required><br><br>
+          
+          <input type="submit" value="Envoyer">
+        </form>
+      </div>
+
+  <script>
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+      event.preventDefault(); // Empêche l'envoi du formulaire par défaut
+      
+      var form = event.target;
+      var formData = new FormData(form);
+      
+      fetch(form.action, {
+        method: form.method,
+        body: formData
+      })
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(data) {
+        if (data.success) {
+          window.location.href = "https://www.example.com/thank-you"; // Redirection vers la page de remerciement si l'enregistrement a réussi
+        } else {
+          alert(data.message); // Affiche un message d'erreur si l'enregistrement a échoué
+        }
+      })
+      .catch(function(error) {
+        console.error(error);
+        alert("Une erreur s'est produite lors de l'envoi du formulaire.");
+      });
+    });
+  </script>
+</body>
+</html>
