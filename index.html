@@ -11,6 +11,7 @@
 
     <style>
         body {
+            background-image: url("bg.jpg");
             margin: 0px;
         }
 
@@ -22,15 +23,14 @@
 
 
         .navbar {
-            margin: 5px;
             width: 100%;
             height: 10vh;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background-color: rgba(255, 255, 255, .15);
-            backdrop-filter: blur(5px);
-            border-radius: 25px;
+            background-color: white;
+            border-bottom-right-radius: 15px;
+            border-bottom-left-radius: 15px;
 
             /* background: rgb(5,14,31);
                 background: linear-gradient(90deg, rgba(5,14,31,1) 0%, rgba(38,82,32,1) 100%); */
@@ -45,7 +45,7 @@
         }
 
         .navbar ul li a {
-            color: white;
+            color: black;
             font-weight: bold;
             font-size: 15px;
             transition: .4s;
@@ -69,9 +69,8 @@
 
         .footer-basic {
             width: 100%;
-            padding: 40px 0;
-            background-color: #444;;
-            color: white; 
+            background-color: white;
+            color: black; 
         }
 
         .footer-basic ul {
@@ -84,37 +83,18 @@
         }
 
         .footer-basic li {
-            display: inline-block;
+            display: block;
             padding: 0 10px;
+            margin: 20px;
         }
 
         .footer-basic ul a {
             color: inherit;
-            text-decoration: none;
             opacity: 0.8;
         }
 
         .footer-basic ul a:hover {
             opacity: 1;
-        }
-
-        .footer-basic .social {
-            text-align: center;
-            padding-bottom: 25px;
-        }
-
-        .footer-basic .social>a {
-            font-size: 24px;
-            width: 40px;
-            height: 40px;
-            line-height: 40px;
-            display: inline-block;
-            text-align: center;
-            border-radius: 50%;
-            border: 1px solid #ccc;
-            margin: 0 8px;
-            color: inherit;
-            opacity: 0.75;
         }
 
         .footer-basic .social>a:hover {
@@ -128,17 +108,24 @@
             color: #aaa;
             margin-bottom: 0;
         }
+
+        .upform {
+            height: 100px;
+            width: 100px;
+            background-color: black;
+        }
     </style>
 </head>
 
 <body>
     <header>
         <div class="navbar">
-            <div class="logo"><img src="pilea_white.png"></div>
+            <div class="logo"><img src="pilea_black.png"></div>
             <ul class="links">
-                <li><a href>Accueil</a></li>
-                <li><a href="#">À propos</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href>Dashboard</a></li>
+                <li><a href="#">Trello</a></li>
+                <li><a href="#">Notre Agence | Notre Agence</a></li>
+                <li><a href="#">Contactez-nous</a></li>
             </ul>
         </div>
     </header>
@@ -149,16 +136,9 @@
 
     <div class="footer-basic">
         <footer>
-            <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i
-                        class="icon ion-social-snapchat"></i></a><a href="#"><i
-                        class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a>
-            </div>
             <ul class="list-inline">
-                <li class="list-inline-item"><a href="#">Home</a></li>
-                <li class="list-inline-item"><a href="#">Services</a></li>
-                <li class="list-inline-item"><a href="#">About</a></li>
-                <li class="list-inline-item"><a href="#">Terms</a></li>
-                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+                <li class="list-inline-item">Une question ? Parlons-en ensemble ...</li>
+                <li class="list-inline-item"><a href="mailto:martin.decombarieu@gmail.com">Contactez nous !</a></li>
             </ul>
             <p class="copyright">Pilea © 2023</p>
         </footer>
