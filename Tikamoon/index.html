@@ -7,12 +7,13 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-
+    <link href="https://fonts.cdnfonts.com/css/open-sauce-one" rel="stylesheet">
 
     <style>
         body {
             background-image: url("bg.jpg");
             margin: 0px;
+            font-family: 'Open Sauce One', sans-serif;
         }
 
         header {
@@ -21,27 +22,40 @@
         }
 
 
+        .links {
+            overflow: auto;
+            justify-content: center;
+            margin: 0;
+    display: flex;
+    justify-content: center;
+        }
 
         .navbar {
             width: 100%;
-            height: 10vh;
             display: flex;
-            align-items: center;
             justify-content: space-between;
             background-color: white;
-            border-bottom-right-radius: 15px;
-            border-bottom-left-radius: 15px;
+            flex-direction: column;
+            overflow: auto;
+
 
             /* background: rgb(5,14,31);
                 background: linear-gradient(90deg, rgba(5,14,31,1) 0%, rgba(38,82,32,1) 100%); */
+        }
+
+        .navbar ul {
+            padding-inline-start: 0px;
         }
 
         .navbar ul li {
             list-style-type: none;
             display: inline-block;
             padding: 10px 20px;
-            justify-content: left;
-            align-items: baseline;
+            justify-content: center;
+            align-items:flex-end;
+            max-width:15em;
+            text-align: center;
+            margin-left: 50px;
         }
 
         .navbar ul li a {
@@ -56,6 +70,9 @@
             margin: 20px;
             max-width: 100px;
             max-height: 40;
+            margin-bottom: 10px;
+            margin-bottom: 10px;
+            float: left;
         }
 
         img {
@@ -114,6 +131,12 @@
             width: 100px;
             background-color: black;
         }
+
+        #une-question{
+            padding-top: 30px;
+        }
+
+        
     </style>
 </head>
 
@@ -121,12 +144,17 @@
     <header>
         <div class="navbar">
             <div class="logo"><img src="pilea_black.png"></div>
-            <ul class="links">
-                <li><a href>Dashboard</a></li>
-                <li><a href="#">Trello</a></li>
-                <li><a href="#">Notre Agence | Notre Agence</a></li>
-                <li><a href="#">Contactez-nous</a></li>
-            </ul>
+            <div class="content">
+                <div class="below-logo">
+                    <!-- Votre contenu en dessous du logo -->
+                </div>
+                <ul class="links">
+                    <li><a href>Dashboard</a></li>
+                    <li><a href="https://trello.com/b/SFZHbKqf/statut-bug-tikamoon">Trello</a></li>
+                    <li><a href="https://www.pilea.one">Notre Agence | Notre Agence</a></li>
+                    <li><a onclick="alert('Baptist VANPOPERINGHE\n+33671586813')">Contactez-nous</a></li>
+                </ul>
+            </div>
         </div>
     </header>
 
@@ -137,8 +165,8 @@
     <div class="footer-basic">
         <footer>
             <ul class="list-inline">
-                <li class="list-inline-item">Une question ? Parlons-en ensemble ...</li>
-                <li class="list-inline-item"><a href="mailto:martin.decombarieu@gmail.com">Contactez nous !</a></li>
+                <li class="list-inline-item" id="une-question">Une question ? Parlons-en ensemble ...</li>
+                <li class="list-inline-item"><a onclick="alert('Baptist VANPOPERINGHE\n+33671586813')">Contactez nous !</a></li>
             </ul>
             <p class="copyright">Pilea © 2023</p>
         </footer>
