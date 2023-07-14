@@ -1,0 +1,303 @@
+body{
+    background-color: #E6E3DC;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav{
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    /* height:10%; */
+    width: 100vw;
+    padding: 32px;
+    position: fixed;
+}
+
+nav .brand{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo{
+    width: 70px;
+}
+
+@keyframes menu {
+  0% {
+        margin: 0;
+    }
+  5% {
+        width: 0px;
+        background-color: transparent;
+    }
+  10% {       
+        margin: 4px 0;
+        height:2px;
+    }
+  50% {
+        height:104px;
+        width:0px;
+    }
+  100% {
+        margin: 4px 0;
+        height:auto;
+        width: 200px;
+        background-color: transparent;
+  }
+}
+
+.bar{
+    width: 30px;
+    height: 2px;
+    background-color: black;
+    margin-left: auto;
+}
+
+/* .burger-menu{
+    margin-top: 80px;
+} */
+
+.mid-bar{
+    height: 2px;
+    width: 30px;
+    overflow: hidden;
+    background: black;
+    margin: 4px 0;
+    white-space: nowrap;
+    text-align: end;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.burger-menu.open .mid-bar{
+    animation-name: menu;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.mid-bar li{
+    padding: 4px 0;
+}
+
+section{
+    padding: 4% 7%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero{
+    padding: 8% 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: normal;
+}
+
+h1{
+    font-size: 120px;
+    margin-bottom: 96px;
+}
+
+.hero-title{
+    padding: 0 8%;
+    display: flex;
+    row-gap: 42px;
+    flex-direction: column;
+    font-family: 'Abril Fatface', cursive;
+    text-transform: uppercase;
+}
+
+.hero-subtitle{
+    font-weight:400;
+}
+
+.of-font-family{
+    padding: 0 10%;
+    font-family: 'Charm', cursive;
+    text-transform: lowercase
+}
+
+h2{
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 200%;
+}
+
+.white{
+    background-color: #FAF8F3;
+}
+
+.expertise-side{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10%;
+}
+
+.expertise-side p{
+    width: 67%;
+    text-align: center;
+}
+
+.section-title{
+    margin-bottom: 4%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.citation-side{
+    padding: 5% 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.citation{
+    padding-left: 8%;
+    width: 50%;
+    display: flex;
+    align-items: flex-end;
+    column-gap: 5px;
+}
+
+.quote{
+    color: gray;
+    font-size: 28px;
+    /* font-family: Verdana, sans-serif; */
+}
+
+.citation-side p{
+    font-size: 18px;
+    margin-bottom: 64px;
+    display: inline;
+    text-align: center;
+}
+
+.profile-image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pp{
+    width: 66%;
+    margin-bottom: 6px;
+}
+
+.cti{
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.comp{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.form{
+    width: 400px;
+}
+
+.comp-list{
+    position: absolute;
+    top: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    row-gap: 12px;
+    font-size: 20px;
+}
+
+.bgs{
+    text-align: center;
+    margin-bottom: 14px;
+}
+
+.sep-line{
+    height: 2px;
+    width: 20%;
+    background-color: black;
+    margin-bottom: 8%;
+}
+
+.bgs-txt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+}
+
+.bgs-txt p{
+    margin-bottom: 4%;
+}
+
+.bug-item-image{
+    width: 100px;
+}
+
+.bugs-grid{
+    margin: 4% 2%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: space-between;
+    row-gap: 64px;
+}
+
+.bug-item{
+    display: flex;
+    column-gap: 32px;
+    justify-content: center;
+}
+
+h3{
+    font-size: 18px;
+    line-height: 200%;
+}
+
+.bug-item-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+}
+
+.bug-item-content p{
+    color: grey;
+}
+
+.int-list{
+    text-align: center;
+}
+
+.int-list li{
+    margin-bottom: 6%;
+}
+
+.sep-dot{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.sep-dot span{
+    margin: 0 1%;
+    font-size: 32px;
+}
+
+
+.contact p{
+    margin-bottom: 3%;
+}
+
+.contact-link{
+    text-decoration: underline;
+}
