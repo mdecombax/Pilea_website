@@ -94,7 +94,7 @@ section{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: normal;
+    align-items: center;
 }
 
 h1{
@@ -113,6 +113,7 @@ h1{
 
 .hero-subtitle{
     font-weight:400;
+    width: 100%;
 }
 
 .of-font-family{
@@ -128,7 +129,7 @@ h2{
 }
 
 .white{
-    background-color: #FAF8F3;
+    background: linear-gradient(180deg, #E6E3DC 0%, #FAF8F3 9.38%, #FAF8F3 89.58%, #E6E3DC 100%);
 }
 
 .expertise-side{
@@ -145,7 +146,8 @@ h2{
 }
 
 .section-title{
-    margin-bottom: 4%;
+    position: relative;
+    margin-bottom: 2%;
     display: flex;
     flex-direction: column;
     align-items: center;
