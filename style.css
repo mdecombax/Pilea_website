@@ -20,7 +20,7 @@ nav .brand{
 }
 
 .logo{
-    width: 70px;
+    width: 10vh;
 }
 
 @keyframes menu {
@@ -48,19 +48,23 @@ nav .brand{
 }
 
 .bar{
-    width: 30px;
     height: 2px;
     background-color: black;
     margin-left: auto;
+    width: 100%;
 }
 
-/* .burger-menu{
-    margin-top: 80px;
-} */
+.burger-menu{
+    height: fit-content;
+    margin: auto 0;
+    width: 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
 
 .mid-bar{
     height: 2px;
-    width: 30px;
     overflow: hidden;
     background: black;
     margin: 4px 0;
@@ -70,6 +74,7 @@ nav .brand{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    width: 100%;
 }
 
 .burger-menu.open .mid-bar{
@@ -98,7 +103,7 @@ section{
 }
 
 h1{
-    font-size: 120px;
+    font-size: 10vw;
     margin-bottom: 96px;
 }
 
@@ -114,6 +119,7 @@ h1{
 .hero-subtitle{
     font-weight:400;
     width: 100%;
+    text-align: start;
 }
 
 .of-font-family{
@@ -123,9 +129,17 @@ h1{
 }
 
 h2{
+    width: 100%;
     font-size: 20px;
     font-weight: bold;
     line-height: 200%;
+    text-wrap: nowrap;
+    text-align: center;
+}
+
+.h2-image{
+    transform: rotate(284deg);
+    width: 16vw;
 }
 
 .white{
@@ -137,7 +151,7 @@ h2{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 10%;
+    margin-bottom: 4%;
 }
 
 .expertise-side p{
@@ -146,11 +160,13 @@ h2{
 }
 
 .section-title{
+    width: 100%;
     position: relative;
     margin-bottom: 2%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .citation-side{
@@ -243,7 +259,7 @@ h2{
 }
 
 .bug-item-image{
-    width: 100px;
+    width: 25%;
 }
 
 .bugs-grid{
@@ -251,25 +267,27 @@ h2{
     display: grid;
     grid-template-columns: 50% 50%;
     justify-content: space-between;
-    row-gap: 64px;
+    row-gap: 22%;
 }
 
 .bug-item{
     display: flex;
-    column-gap: 32px;
+    column-gap: 6%;
     justify-content: center;
+    align-items: center;
 }
 
 h3{
     font-size: 18px;
-    line-height: 200%;
+    /* line-height: 200%; */
+    margin-bottom: 8px;
 }
 
 .bug-item-content{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 40%;
+    width: 70%;
 }
 
 .bug-item-content p{
@@ -302,4 +320,146 @@ h3{
 
 .contact-link{
     text-decoration: underline;
+}
+
+.image-metodo{
+    margin: 2% 0; width: 60vw;
+}
+
+.image-team{
+    /* margin: 10% 0; */
+    width: 60vw;
+}
+
+.h-full{
+    height: 100vh;
+}
+@media (max-width: 1023px) {
+    .image-metodo{
+        margin: 2% 0 8% 0;
+        width: 80vw;
+    }
+
+    .image-team{
+        margin: 10% 0;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .logo{
+        width: 6vh;
+    }
+
+    .cti{
+        text-wrap:wrap;
+    }
+
+    h2{
+        font-size: 16px;
+    }
+
+    body{
+        font-size: 14px;
+    }
+
+    .citation-side p{
+        font-size: 16px;
+    }
+
+    .comp-list{
+        font-size: 16px;
+    }
+
+    .form{
+        width: 58%;
+    }
+
+    h1{
+        font-size: 8vw;
+        margin-bottom: 5%;
+    }
+
+    .hero-title{
+        width: 100%;
+        row-gap: 28px;
+    }
+
+    nav{
+        padding: 3%;
+    }
+
+    .pp{
+        width: 46%;
+    }
+
+    .citation{
+        width: 74%;
+        padding: 6%;
+    }
+
+    .image-team{
+        width: 80vw;
+    }
+
+    .contact{
+        text-align: center;
+    }
+
+    .burger-menu{
+        width: 3vw;
+    }
+
+    .h-full{
+        height: auto;
+    }
+}
+
+@media (max-width: 426px) {
+
+    .expertise-side p{
+        width: 100%;
+    }
+
+    .citation{
+        padding: 0;
+        margin-bottom: 12px;
+    }
+
+    .quote{
+        font-size: 18px;
+    }
+
+    .citation-side {
+        flex-direction: column;
+    }
+
+    .citation-side p{
+        font-size: 14px;
+    }
+
+    h2{
+        font-size: 14px;
+    }
+
+    body{
+        font-size: 12px;
+    }
+
+    .bug-item-image{
+        display: none;
+    }
+
+    h3{
+        font-size: 14px;
+    }
+
+    .hero-subtitle{
+        font-size: 12px;
+        text-wrap: wrap;
+    }
+
+    section{
+        padding: 10% 4%;
+    }
 }
