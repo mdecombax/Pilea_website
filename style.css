@@ -100,6 +100,10 @@ section{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: url(/images/background-rm.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: 10%;
 }
 
 h1{
@@ -287,7 +291,7 @@ h3{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 70%;
+    width: 45%;
 }
 
 .bug-item-content p{
@@ -413,6 +417,10 @@ h3{
     .h-full{
         height: auto;
     }
+
+    .bug-item-content{
+        width: 60%;
+    }
 }
 
 @media (max-width: 426px) {
@@ -461,5 +469,9 @@ h3{
 
     section{
         padding: 10% 4%;
+    }
+
+    .bug-item-content{
+        width: 80%;
     }
 }
