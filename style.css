@@ -100,10 +100,6 @@ section{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url(/images/background-rm.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position-x: 10%;
 }
 
 h1{
