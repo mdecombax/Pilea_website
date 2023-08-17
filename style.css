@@ -4,6 +4,12 @@ body{
     font-family: 'Open Sans', sans-serif;
 }
 
+canvas{
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
 nav{
     display: flex;
     /* align-items: center; */
